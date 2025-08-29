@@ -120,11 +120,11 @@
     .contact-wrap{ background:#0b1013; color:var(--white); padding:48px 20px; border-radius:16px; box-shadow:var(--shadow) }
     .contact .socials{ display:flex; gap:10px; justify-content:center; margin-top:12px; flex-wrap:wrap }
     .pill{
-      display:inline-flex; gap:10px; align-items:center; text-decoration:wavy; color:var(--accent);
+      display:inline-flex; gap:10px; align-items:center; text-decoration:wavy; color:var(--primary);
       padding:10px 14px; border-radius:999px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.03);
       transition:transform .16s, background .16s;
     }
-    .pill:hover{ transform:translateY(-5px); background:var(--accent); color:var(--primary); box-shadow:0 10px 30px rgba(2,6,23,0.12) }
+    .pill:hover{ transform:translateY(-5px); background:var(--white); color:var(--primary); box-shadow:0 10px 30px rgba(2,6,23,0.12) }
 
     .form{ max-width:560px; margin:18px auto 0; display:grid; gap:10px }
     .input{ padding:12px 14px; border-radius:10px; border:1px solid rgba(10,10,10,0.06); background:var(--white); font-size:1rem }
@@ -366,37 +366,60 @@
       <div class="section-head">
         <div class="section-title">Contact</div>
         <div class="section-sub">Open to internships, collaborations, and conversations</div>
+         <p style="text-align:center;color:rgba(255,255,255,0.87);font-size:1rem">Quick contact & links</p>
+
+          <div class="socials" style="display:flex;gap:12px;justify-content:center;margin-top:14px">
+            <a class="pill" href="mailto:ashishmanoj21@email.com" target="_blank" rel="noopener noreferrer">
+              <!-- Gmail SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 92.12" width="20" height="20" aria-hidden="true">
+                <style type="text/css">
+                  .st0{fill:#EA4335;}
+                  .st1{fill:#C5221F;}
+                  .st2{fill:#FBBC04;}
+                  .st3{fill:#34A853;}
+                  .st4{fill:#4285F4;}
+                </style>
+                <g>
+                  <path class="st4" d="M8.36,92.12h19.54V44.67L0,23.76v60.08C0,88.42,3.78,92.12,8.36,92.12L8.36,92.12z"/>
+                  <path class="st3" d="M94.97,92.12h19.54c4.67,0,8.36-3.78,8.36-8.36v-60L94.97,44.67V92.12L94.97,92.12z"/>
+                  <path class="st2" d="M94.97,8.4v36.27l27.91-20.91V12.58c0-10.37-11.82-16.25-20.11-10.05L94.97,8.4L94.97,8.4z"/>
+                  <polygon class="st0" points="27.9,44.67 27.9,8.4 61.44,33.57 94.97,8.4 94.97,44.67 61.44,69.76 27.9,44.67"/>
+                  <path class="st1" d="M0,12.58v11.18l27.91,20.91V8.4l-7.8-5.87C11.82-3.66,0,2.29,0,12.58L0,12.58z"/>
+                </g>
+              </svg>
+              Email
+            </a>
+            
+
+            <a class="pill" href="https://www.linkedin.com/in/ashishthirunahari/" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 122.31" width="20" height="20" aria-hidden="true">
+                <defs>
+                  <style>
+                    .cls-1{fill:#0a66c2;fill-rule:evenodd;}
+                    .cls-2{fill:#fff;fill-rule:evenodd;}
+                  </style>
+                </defs>
+                <path class="cls-1" d="M27.75,0H95.13a27.83,27.83,0,0,1,27.75,27.75V94.57a27.83,27.83,0,0,1-27.75,27.74H27.75A27.83,27.83,0,0,1,0,94.57V27.75A27.83,27.83,0,0,1,27.75,0Z"/>
+                <path class="cls-2" d="M49.19,47.41H64.72v8h.22c2.17-3.88,7.45-8,15.34-8,16.39,0,19.42,10.2,19.42,23.47V98.94H83.51V74c0-5.71-.12-13.06-8.42-13.06s-9.72,6.21-9.72,12.65v25.4H49.19V47.41ZM40,31.79a8.42,8.42,0,1,1-8.42-8.42A8.43,8.43,0,0,1,40,31.79ZM23.18,47.41H40V98.94H23.18V47.41Z"/>
+              </svg>
+              LinkedIn
+            </a>
+            
+
+            <a class="pill" href="https://github.com/ashish" target="_blank" rel="noopener noreferrer">
+              <!-- GitHub SVG -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="20" height="20" aria-hidden="true">
+                <path d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z"/>
+              </svg>
+              GitHub
+            </a>
       </div>
 
       <div class="contact-wrap">
         <div style="max-width:900px;margin:0 auto">
-          <p style="text-align:center;color:rgba(255,255,255,0.87);font-size:1rem">Quick contact & links</p>
-
-          <div class="socials" style="display:flex;gap:12px;justify-content:center;margin-top:14px">
-            <a class="pill" href="mailto:ashishmanoj21@email.com" target="_blank" rel="noopener">
-              <!-- mail svg -->
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 8.5v7A2.5 2.5 0 0 0 5.5 18h13A2.5 2.5 0 0 0 21 15.5v-7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Email
-            </a>
-
-            <a class="pill" href="https://www.linkedin.com/in/ashishthirunahari" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v6h-4v-6a2 2 0 1 0-4 0v6h-4v-12h4v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              LinkedIn
-            </a>
-
-            <a class="pill" href="https://github.com/ashish2784" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.36-1.17-3.36-1.17A2.65 2.65 0 0 0 6 16.9c-.9-.62.07-.61.07-.61a2.09 2.09 0 0 1 1.52 1 2.09 2.09 0 0 0 2.86.82c.07-.64.34-1.08.62-1.33-2.21-.25-4.54-1.1-4.54-4.9a3.83 3.83 0 0 1 1.07-2.66 3.56 3.56 0 0 1 .1-2.62s.87-.28 2.85 1.03a9.86 9.86 0 0 1 5.2 0c1.98-1.31 2.85-1.03 2.85-1.03a3.56 3.56 0 0 1 .1 2.62 3.84 3.84 0 0 1 1.07 2.66c0 3.81-2.34 4.65-4.57 4.89.35.3.66.86.66 1.74v2.58c0 .26.18.58.69.48A10 10 0 0 0 12 2z" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              GitHub
-            </a>
-          </div>
-
-          <br>
-          <br>
-
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1c8kJLW2nru8mIqKhN3tNKq5z1MXRjWe3jSfXujZkLxYZdw/viewform?embedded=true" width="640" height="782" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-      
           
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1c8kJLW2nru8mIqKhN3tNKq5z1MXRjWe3jSfXujZkLxYZdw/viewform?embedded=true" width="640" height="782" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      
         </div>
       </div>
     </div>
