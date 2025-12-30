@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+    --color-swiss-red: #FE3B1F;
+    --color-swiss-black: #000000;
+    --color-swiss-white: #ffffff;
+    --color-swiss-gray: #f8f8f8;
+    --color-swiss-muted: #86868b;
+
+    --font-swiss: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    --shadow-xl: 0 40px 80px rgba(0, 0, 0, 0.12);
+    --shadow-2xl: 0 50px 100px rgba(0, 0, 0, 0.15);
+
+    --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply font-swiss bg-white text-black antialiased leading-relaxed overflow-x-hidden;
+    }
+}
+
+/* Scroll Reveal States using Tailwind */
+.reveal {
+    @apply opacity-0 translate-y-10 transition-all ease-apple duration-700;
+}
+
+.reveal.show {
+    @apply opacity-100 translate-y-0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}

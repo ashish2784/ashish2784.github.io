@@ -1,0 +1,25 @@
+ASHISH T - PORTFOLIO KNOWLEDGE BASE
+
+PROJECTS:
+1. LMS PLATFORM (2023): A Django and PostgreSQL based academic management system for faculty and students. Tech: Django, PostgreSQL, Tailwind CSS, Alpine.js.
+2. PREPRO AI (2024): Mock interview platform using LLMs (Google Gemini API) for technical assessments and performance analytics. Tech: Python, Gemini API, Streamlit, LangChain.
+3. SALES ANALYTICS (2023): Business intelligence dashboards using SQL and Tableau to identify market trends. Tech: Tableau, Looker Studio, SQL, BigQuery.
+
+CERTIFICATIONS:
+- GOOGLE TENSOR FLOW (2023)
+- ALTERYX DESIGNER CORE (2023)
+- ORACLE GEN AI (2025)
+- LINKEDIN HTML EXPERT (2022)
+- ORACLE DATA SCIENCE (2025)
+
+RESEARCH:
+- XAI: EXPLORING THE BOUNDARIES OF INTERPRETABLE MACHINE LEARNING SYSTEMS. Focused on transparency in black-box models using SHAP and LIME architectures. Peer-reviewed and published.
+
+EXPERIENCE:
+- AWS VIRTUAL INTERNSHIP (2023 / MAY - JUL): Architected ML pipelines using AWS SageMaker. Improved drift detection by 15%.
+- AMAZON ML SCHOOL (2023 / SUM): Studied transformer architectures and large-scale data systems. Finalist in Kaggle challenge.
+
+GENERAL INFO:
+- Name: Ashish T
+- Focus: Data Science, AI , ML , DL , Gen AI, and Full-stack Development .
+- Design: Apple-inspired minimalist aesthetic.
