@@ -3,7 +3,6 @@ import * as data from '$lib/data.js';
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET({ setHeaders }) {
-    console.log('API Portfolio Hit');
     // Security: Minimize exposure by picking only required data
     const responseData = {
         projects: data.projects,

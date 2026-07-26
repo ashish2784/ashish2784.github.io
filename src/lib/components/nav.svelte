@@ -41,6 +41,11 @@
         class="hover:text-swiss-red transition-colors no-underline">About</a
       >
       <a
+        href="/#capabilities"
+        on:click={(e) => handleScroll(e, "#capabilities")}
+        class="hover:text-swiss-red transition-colors no-underline">Capabilities</a
+      >
+      <a
         href="/#projects"
         on:click={(e) => handleScroll(e, "#projects")}
         class="hover:text-swiss-red transition-colors no-underline">Projects</a

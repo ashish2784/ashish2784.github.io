@@ -13,7 +13,7 @@
     <div class="col-span-12 md:col-span-8">
       <span
         class="text-xs font-semibold uppercase tracking-widest text-swiss-red mb-4 block"
-        >Internship 2026 Cohort</span
+        >GEN AI ENGINEER</span
       >
       <h1
         class="text-5xl md:text-8xl font-bold text-black mb-8 leading-[1.05] tracking-tight"
@@ -54,7 +54,7 @@
           Current Focus
         </div>
         <p class="text-xl font-bold leading-snug text-black">
-          "Large Language Models and Interpretable AI architectures."
+          "Large Language Models ,Cloud and Agentic AI architectures."
         </p>
         <div class="mt-8 pt-8 border-t border-black/10 flex items-center gap-4">
           <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>

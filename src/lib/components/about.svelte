@@ -65,18 +65,18 @@
             </h3>
             <ul class="space-y-6 text-lg font-semibold opacity-60">
               <li class="flex items-center gap-4">
-                <span class="w-1.5 h-1.5 bg-swiss-red rounded-full"></span> NLP Engineer
+                <span class="w-1.5 h-1.5 bg-swiss-red rounded-full"></span> GEN AI Engineer
               </li>
               <li class="flex items-center gap-4">
-                <span class="w-1.5 h-1.5 bg-swiss-red rounded-full"></span> GenAI
+                <span class="w-1.5 h-1.5 bg-swiss-red rounded-full"></span> AI
                 Solutions
               </li>
               <li class="flex items-center gap-4">
                 <span class="w-1.5 h-1.5 bg-swiss-red rounded-full"></span> Cloud
-                Native (AWS)
+                (AWS)
               </li>
               <li class="flex items-center gap-4">
-                <span class="w-1.5 h-1.5 bg-swiss-red rounded-full"></span> Data
+                <span class="w-1.5 h-1.5 bg-swiss-red rounded-full"></span> Data Analytics &
                 Visualization
               </li>
             </ul>
@@ -90,7 +90,7 @@
               >Availability</span
             >
             <p class="text-sm font-bold leading-relaxed opacity-60">
-              Open to high-impact internships for the 2026 cohort.
+              Open to high-impact Roles related to AI and Engineering.
             </p>
           </div>
         </div>

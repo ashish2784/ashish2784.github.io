@@ -27,10 +27,11 @@
       },
     );
 
-    if (observer) {
+    const currentObserver = observer;
+    if (currentObserver) {
       document
         .querySelectorAll(".reveal")
-        .forEach((el) => observer.observe(el));
+        .forEach((el) => currentObserver.observe(el));
     }
   }
 
@@ -47,7 +48,9 @@
 <Nav />
 
 <main class="pt-[80px]">
-  <slot />
+  <div class="animate-[fadeIn_0.45s_ease-out]">
+    <slot />
+  </div>
   <Chatbot />
 </main>
 
@@ -200,17 +203,4 @@
   </div>
 </section>
 
-<!-- AI AGENT TRIGGER 
-<div class="fixed bottom-12 right-12 z-[100]">
-  <button
-    class="w-20 h-20 bg-swiss-red text-white rounded-full font-bold text-xl shadow-[0_20px_50px_rgba(254,59,31,0.4)] hover:scale-110 active:scale-95 transition-all flex items-center justify-center group overflow-hidden"
-  >
-    <span class="group-hover:translate-x-20 transition-transform duration-500"
-      >AI</span
-    >
-    <span
-      class="absolute -translate-x-20 group-hover:translate-x-0 transition-transform duration-500 font-medium text-[10px] tracking-widest uppercase"
-      >CHAT</span
-    >
-  </button>
-</div>-->
+

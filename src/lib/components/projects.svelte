@@ -26,16 +26,16 @@
       </div>
     </div>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-12 gap-8">
+    <!-- Responsive project slider -->
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
       {#each projects as project}
-        <div class="col-span-12 md:col-span-4 transition-all duration-700">
+        <div class="group transition-all duration-700">
           <a
             href="/projects/{project.slug}"
-            class="group block h-full bg-white p-10 rounded-[2.5rem] border border-black/5 no-underline relative overflow-hidden transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_40px_100px_rgba(0,0,0,0.12)]"
+            class="group block h-full bg-white p-8 sm:p-10 rounded-[2rem] border border-black/5 no-underline relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_80px_rgba(0,0,0,0.12)]"
           >
             <div class="relative z-10 flex flex-col h-full">
-              <div class="flex justify-between items-start mb-12">
+              <div class="flex justify-between items-start mb-10">
                 <div
                   class="bg-swiss-gray px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-swiss-muted"
                 >
@@ -47,18 +47,18 @@
               </div>
 
               <h3
-                class="text-3xl font-bold text-black mb-6 group-hover:text-swiss-red transition-colors leading-tight"
+                class="text-2xl sm:text-3xl font-bold text-black mb-5 group-hover:text-swiss-red transition-colors leading-tight"
               >
                 {project.title}
               </h3>
               <p
-                class="text-lg text-swiss-muted font-medium mb-8 line-clamp-3 leading-relaxed"
+                class="text-base sm:text-lg text-swiss-muted font-medium mb-7 line-clamp-3 leading-relaxed"
               >
                 {project.short}
               </p>
 
               <div
-                class="mt-auto pt-10 border-t border-black/5 flex justify-between items-center group-hover:border-black/20 transition-colors"
+                class="mt-auto pt-8 border-t border-black/5 flex justify-between items-center group-hover:border-black/20 transition-colors"
               >
                 <span
                   class="font-bold uppercase tracking-widest text-[10px] text-black"

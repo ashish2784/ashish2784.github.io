@@ -194,6 +194,7 @@
                     />
                     <button
                         type="submit"
+                        aria-label="Send message"
                         disabled={!query.trim() || isLoading}
                         class="absolute right-2 top-2 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center hover:bg-swiss-red transition-colors disabled:opacity-50"
                     >
