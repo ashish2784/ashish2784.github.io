@@ -1,11 +1,12 @@
 <script>
+  /** @type {Array<{title: string, description: string, link?: string}>} */
   export let research = [];
+  /** @type {Array<{title: string, duration: string, type: string, description: string}>} */
   export let experience = [];
 </script>
 
 <section id="experience" class="py-24 px-8 reveal bg-white">
   <div class="max-w-[1200px] mx-auto grid grid-cols-12 gap-12">
-    <!-- LEFT: RESEARCH -->
     <div class="col-span-12 md:col-span-6 pr-0 md:pr-12">
       <span
         class="text-xs font-semibold uppercase tracking-widest text-swiss-red mb-4 block"
@@ -42,7 +43,6 @@
       </div>
     </div>
 
-    <!-- RIGHT: EXPERIENCE -->
     <div class="col-span-12 md:col-span-6 mt-12 md:mt-0">
       <span
         class="text-xs font-semibold uppercase tracking-widest text-swiss-red mb-4 block"

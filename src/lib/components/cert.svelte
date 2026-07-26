@@ -1,7 +1,11 @@
 <script>
   import { certifications, projects } from "$lib/data.js";
-  let scrollContainer;
+  /** @type {HTMLDivElement | null} */
+  let scrollContainer = null;
 
+  /**
+   * @param {"left" | "right"} direction
+   */
   function scroll(direction) {
     if (scrollContainer) {
       const scrollAmount = scrollContainer.clientWidth;
@@ -41,7 +45,7 @@
       <!-- Arrows -->
       <button
         on:click={() => scroll("left")}
-        class="absolute left-[-60px] top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center hidden md:flex z-20 hover:scale-110 active:scale-95 transition-all text-black hover:text-swiss-red"
+        class="absolute left-2 sm:left-[-50px] top-1/2 -translate-y-1/2 w-11 h-11 bg-white rounded-full shadow-lg items-center justify-center flex z-20 hover:scale-110 active:scale-95 transition-all text-black hover:text-swiss-red"
         aria-label="Previous"
       >
         <svg
@@ -59,7 +63,7 @@
 
       <button
         on:click={() => scroll("right")}
-        class="absolute right-[-60px] top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg items-center justify-center hidden md:flex z-20 hover:scale-110 active:scale-95 transition-all text-black hover:text-swiss-red"
+        class="absolute right-2 sm:right-[-50px] top-1/2 -translate-y-1/2 w-11 h-11 bg-white rounded-full shadow-lg items-center justify-center flex z-20 hover:scale-110 active:scale-95 transition-all text-black hover:text-swiss-red"
         aria-label="Next"
       >
         <svg
@@ -77,15 +81,15 @@
 
       <div
         bind:this={scrollContainer}
-        class="flex overflow-x-auto gap-8 pt-10 pb-20 snap-x snap-mandatory no-scrollbar scroll-smooth"
+        class="flex overflow-x-auto gap-4 sm:gap-6 md:gap-8 pt-10 pb-20 snap-x snap-mandatory no-scrollbar scroll-smooth px-2 sm:px-0"
       >
         {#each certifications as cert}
           <div
-            class="w-[300px] md:w-[calc((100%-24px*3)/4)] flex-shrink-0 snap-start"
+            class="w-[80vw] sm:w-[300px] md:w-[calc((100%-24px*3)/4)] flex-shrink-0 snap-start"
           >
             <a
               href="/certifications/{cert.slug}"
-              class="group block h-full bg-white p-10 rounded-[2rem] shadow-sm no-underline border border-black/5 transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)]"
+              class="group block h-full bg-white p-6 sm:p-8 md:p-10 rounded-[1.5rem] sm:rounded-[2rem] shadow-sm no-underline border border-black/5 transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-4 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]"
             >
               <div class="flex flex-col h-full justify-between">
                 <div>

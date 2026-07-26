@@ -37,17 +37,17 @@
                         {project.tag} / {project.year}
                     </span>
                     <h1
-                        class="text-5xl md:text-8xl font-bold text-black mb-12 tracking-tight leading-none"
+                        class="text-5xl md:text-8xl font-bold text-black mb-8 tracking-tight leading-none"
                     >
                         {project.title}
                     </h1>
                     <p
-                        class="text-2xl md:text-4xl font-light mb-16 leading-tight text-swiss-muted max-w-4xl italic"
+                        class="text-2xl md:text-4xl font-light mb-10 leading-tight text-swiss-muted max-w-4xl italic"
                     >
                         "{project.description}"
                     </p>
 
-                    <div class="flex flex-wrap gap-4 mt-8">
+                    <div class="flex flex-wrap gap-4 mb-12">
                         {#each project.tech as t}
                             <span
                                 class="px-6 py-2 bg-white border border-black/5 shadow-sm rounded-full font-bold text-[10px] uppercase tracking-widest text-black"
@@ -56,33 +56,58 @@
                             </span>
                         {/each}
                     </div>
+
+                    <div class="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-sm border border-black/5">
+                        <h2 class="text-2xl font-bold text-black mb-6">Case Study</h2>
+                        <p class="text-lg leading-relaxed text-swiss-muted mb-8">{project.story}</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <h3 class="text-sm font-black uppercase tracking-[0.2em] text-swiss-red mb-4">Highlights</h3>
+                                <ul class="space-y-3 text-sm font-medium text-black">
+                                    {#each project.highlights as item}
+                                        <li class="flex gap-3">
+                                            <span class="w-2 h-2 rounded-full bg-swiss-red mt-2"></span>
+                                            <span>{item}</span>
+                                        </li>
+                                    {/each}
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-black uppercase tracking-[0.2em] text-swiss-red mb-4">Impact</h3>
+                                <p class="text-sm leading-relaxed text-swiss-muted">{project.impact}</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            {#if project.links?.github}
+                                <a href={project.links.github} target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-bold rounded-full no-underline hover:bg-swiss-red transition-colors">View Code</a>
+                            {/if}
+                            {#if project.links?.demo}
+                                <a href={project.links.demo} target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-black/10 text-black font-bold rounded-full no-underline hover:bg-swiss-gray transition-colors">View Demo</a>
+                            {/if}
+                            {#if project.links?.article}
+                                <a href={project.links.article} target="_blank" class="inline-flex items-center justify-center px-6 py-3 border border-black/10 text-black font-bold rounded-full no-underline hover:bg-swiss-gray transition-colors">Read More</a>
+                            {/if}
+                        </div>
+                    </div>
                 </div>
 
-                <div
-                    class="col-span-12 md:col-span-4 flex flex-col justify-end"
-                >
-                    <div
-                        class="p-12 bg-white rounded-[3rem] shadow-2xl border border-black/5"
-                    >
-                        <h3
-                            class="text-2xl font-bold mb-8 border-b border-black/5 pb-4"
-                        >
-                            Engineering Specs
-                        </h3>
-                        <ul
-                            class="space-y-6 font-bold uppercase text-[10px] tracking-[0.2em] text-swiss-muted"
-                        >
-                            <li class="flex justify-between">
+                <div class="col-span-12 md:col-span-4 flex flex-col justify-start">
+                    <div class="p-12 bg-white rounded-[3rem] shadow-2xl border border-black/5">
+                        <h3 class="text-2xl font-bold mb-8 border-b border-black/5 pb-4">Engineering Specs</h3>
+                        <ul class="space-y-6 font-bold uppercase text-[10px] tracking-[0.2em] text-swiss-muted">
+                            <li class="flex justify-between gap-4">
                                 <span>/ Role</span>
-                                <span class="text-black">Lead Eng</span>
+                                <span class="text-black text-right">{project.role}</span>
                             </li>
-                            <li class="flex justify-between">
+                            <li class="flex justify-between gap-4">
                                 <span>/ Context</span>
-                                <span class="text-black">Research</span>
+                                <span class="text-black text-right">{project.context}</span>
                             </li>
-                            <li class="flex justify-between">
+                            <li class="flex justify-between gap-4">
                                 <span>/ Timeline</span>
-                                <span class="text-black">Q4 2023</span>
+                                <span class="text-black text-right">{project.timeline}</span>
                             </li>
                         </ul>
                         <a
