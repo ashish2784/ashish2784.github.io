@@ -1,6 +1,6 @@
 <script>
-    import { onMount } from "svelte";
     import { fly } from "svelte/transition";
+    import { getLocalPortfolioResponse } from "$lib/chatFallback.js";
 
     let isOpen = false;
     let query = "";
@@ -14,6 +14,23 @@
     /** @type {HTMLDivElement | null} */
     let chatContainer;
 
+    function getBackendBaseUrl() {
+        const configuredUrl = import.meta.env.VITE_CHAT_API_URL?.trim();
+
+        if (configuredUrl) {
+            return configuredUrl.replace(/\/$/, "");
+        }
+
+        if (typeof window !== "undefined") {
+            const hostname = window.location.hostname;
+            if (hostname === "localhost" || hostname === "127.0.0.1") {
+                return "http://127.0.0.1:8000";
+            }
+        }
+
+        return "";
+    }
+
     async function sendMessage() {
         if (!query.trim() || isLoading) return;
 
@@ -22,41 +39,36 @@
         messages = [...messages, { role: "user", content: userMessage }];
         isLoading = true;
 
-        try {
-            const response = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: userMessage }),
-            });
+        const backendBaseUrl = getBackendBaseUrl();
 
-            if (response.ok) {
-                const data = await response.json();
-                messages = [
-                    ...messages,
-                    { role: "assistant", content: data.response },
-                ];
-            } else {
-                const errorData = await response.json();
-                messages = [
-                    ...messages,
-                    {
-                        role: "assistant",
-                        content: `Error: ${errorData.error || "Something went wrong."}`,
-                    },
-                ];
+        try {
+            if (backendBaseUrl) {
+                const response = await fetch(`${backendBaseUrl}/api/chat`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message: userMessage }),
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    messages = [
+                        ...messages,
+                        { role: "assistant", content: data.response },
+                    ];
+                    return;
+                }
             }
         } catch (err) {
-            messages = [
-                ...messages,
-                {
-                    role: "assistant",
-                    content: "Error: Could not connect to the backend.",
-                },
-            ];
-        } finally {
-            isLoading = false;
-            scrollToBottom();
+            console.warn("Chat backend unavailable, using local fallback.", err);
         }
+
+        messages = [
+            ...messages,
+            {
+                role: "assistant",
+                content: getLocalPortfolioResponse(userMessage),
+            },
+        ];
     }
 
     function scrollToBottom() {
