@@ -1,6 +1,45 @@
 import { capabilities, certifications, experience, projects, research } from './data.js';
 
 /**
+ * @param {unknown} response
+ */
+export function normalizeChatResponse(response) {
+    if (typeof response === 'string') {
+        return response;
+    }
+
+    if (Array.isArray(response)) {
+        const text = response
+            .map((item) => {
+                if (typeof item === 'string') return item;
+                if (item && typeof item === 'object' && 'text' in item && typeof item.text === 'string') {
+                    return item.text;
+                }
+                if (item && typeof item === 'object' && 'content' in item && typeof item.content === 'string') {
+                    return item.content;
+                }
+                return '';
+            })
+            .filter(Boolean)
+            .join('\n\n');
+
+        if (text) {
+            return text;
+        }
+    }
+
+    if (response && typeof response === 'object' && 'text' in response && typeof response.text === 'string') {
+        return response.text;
+    }
+
+    if (response && typeof response === 'object' && 'content' in response && typeof response.content === 'string') {
+        return response.content;
+    }
+
+    return 'I’m here to help with Ashish’s portfolio.';
+}
+
+/**
  * @param {string} message
  */
 export function getLocalPortfolioResponse(message) {

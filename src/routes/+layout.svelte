@@ -67,10 +67,10 @@
         Let's build the <br /> future. Sync now.
       </h2>
 
-      <div class="flex flex-wrap gap-x-12 gap-y-6 mt-12">
+      <div class="flex flex-wrap gap-4 mt-12">
         <a
-          href="mailto:a@gmail.com"
-          class="flex items-center gap-3 text-2xl font-normal transition-all no-underline text-white"
+          href="mailto:ashishmanoj21@gmail.com"
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold rounded-full shadow-[0_14px_35px_rgba(255,255,255,0.08)] hover:bg-white hover:text-black hover:scale-105 hover:shadow-[0_18px_45px_rgba(255,255,255,0.18)] transition-all duration-300 no-underline"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -122,9 +122,10 @@
           Email
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/ashishthirunahari"
           target="_blank"
-          class="flex items-center gap-3 text-2xl font-normal transition-all no-underline text-white"
+          rel="noreferrer"
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold rounded-full shadow-[0_14px_35px_rgba(255,255,255,0.08)] hover:bg-white hover:text-black hover:scale-105 hover:shadow-[0_18px_45px_rgba(255,255,255,0.18)] transition-all duration-300 no-underline"
         >
           <svg
             width="24"
@@ -146,9 +147,10 @@
           LinkedIn
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/ashish2784"
           target="_blank"
-          class="flex items-center gap-3 text-2xl font-normal transition-all no-underline text-white"
+          rel="noreferrer"
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold rounded-full shadow-[0_14px_35px_rgba(255,255,255,0.08)] hover:bg-white hover:text-black hover:scale-105 hover:shadow-[0_18px_45px_rgba(255,255,255,0.18)] transition-all duration-300 no-underline"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -202,5 +204,3 @@
     </div>
   </div>
 </section>
-
-

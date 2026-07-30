@@ -1,6 +1,9 @@
 <script>
     import { fly } from "svelte/transition";
-    import { getLocalPortfolioResponse } from "$lib/chatFallback.js";
+    import {
+        getLocalPortfolioResponse,
+        normalizeChatResponse,
+    } from "$lib/chatFallback.js";
 
     let isOpen = false;
     let query = "";
@@ -41,25 +44,36 @@
 
         const backendBaseUrl = getBackendBaseUrl();
 
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+
         try {
             if (backendBaseUrl) {
                 const response = await fetch(`${backendBaseUrl}/api/chat`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ message: userMessage }),
+                    signal: controller.signal,
                 });
 
                 if (response.ok) {
                     const data = await response.json();
                     messages = [
                         ...messages,
-                        { role: "assistant", content: data.response },
+                        {
+                            role: "assistant",
+                            content: normalizeChatResponse(data.response),
+                        },
                     ];
+                    scrollToBottom();
                     return;
                 }
             }
         } catch (err) {
             console.warn("Chat backend unavailable, using local fallback.", err);
+        } finally {
+            clearTimeout(timeoutId);
+            isLoading = false;
         }
 
         messages = [
@@ -69,6 +83,7 @@
                 content: getLocalPortfolioResponse(userMessage),
             },
         ];
+        scrollToBottom();
     }
 
     function scrollToBottom() {
